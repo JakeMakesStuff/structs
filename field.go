@@ -60,6 +60,11 @@ func (f *Field) Kind() reflect.Kind {
 	return f.value.Kind()
 }
 
+// Type returns the fields type.
+func (f *Field) Type() reflect.Type {
+	return f.value.Type()
+}
+
 // Set sets the field to given value v. It returns an error if the field is not
 // settable (not addressable or not exported) or if the given value's type
 // doesn't match the fields type.
